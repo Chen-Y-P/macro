@@ -15,7 +15,7 @@ public class UserServiceImplTest {
 
     @Before
     public void setUp() {
-        applicationContext = new ClassPathXmlApplicationContext("spring/applicationContext.xml",
+        applicationContext = new ClassPathXmlApplicationContext("spring/applicationContext-trans.xml",
                 "spring/applicationContext-dao.xml",
                 "spring/applicationContext-service.xml");
     }
