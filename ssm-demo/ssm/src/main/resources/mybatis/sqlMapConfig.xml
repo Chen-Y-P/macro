@@ -11,4 +11,11 @@
         <!--给持久化类配置指定包，可以才有mapper中可以才有别名访问-->
         <package name="com.macro.ssm.po"/>
     </typeAliases>
+    <plugins>
+        <!-- 配置分页插件 -->
+        <plugin interceptor="com.github.pagehelper.PageInterceptor">
+            <!-- 指定使用的是什么数据库 -->
+            <property name="helperDialect" value="mysql"/>
+        </plugin>
+    </plugins>
 </configuration>

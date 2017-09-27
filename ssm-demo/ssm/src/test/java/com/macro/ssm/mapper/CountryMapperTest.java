@@ -1,5 +1,7 @@
 package com.macro.ssm.mapper;
 
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 import com.macro.ssm.po.Country;
 import com.macro.ssm.po.CountryExample;
 import org.junit.Test;
@@ -17,6 +19,24 @@ import static org.junit.Assert.assertEquals;
 public class CountryMapperTest {
     @Autowired
     private CountryMapper countryMapper;
+
+    /**
+     * 分页查询
+     */
+    @Test
+    public void getCountryListByPage() throws Exception {
+        PageHelper.startPage(1,20);
+        List<Country> countryList = countryMapper.selectByExample(new CountryExample());
+        PageInfo<Country> pageInfo = new PageInfo<Country>(countryList);
+        long total = pageInfo.getTotal();
+        System.out.println("total:" + total);
+        int pages = pageInfo.getPages();
+        System.out.println("pages:" + pages);
+        int pageSize = pageInfo.getPageSize();
+        System.out.println("pageSize:" + pageSize);
+        int startRow = pageInfo.getStartRow();
+        System.out.println("startRow:" + startRow);
+    }
     @Test
     public void deleteByExample() throws Exception {
         int count = countryMapper.deleteByPrimaryKey(new Short("114"));
