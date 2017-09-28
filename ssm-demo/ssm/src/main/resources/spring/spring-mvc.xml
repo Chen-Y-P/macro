@@ -6,6 +6,8 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd">
     <!--controller-->
     <context:component-scan base-package="com.macro.ssm.controller"/>
+    <!--加载数据库配置文件,SpringMvc中无法访问Spring中加载的配置文件-->
+    <context:property-placeholder location="classpath:properties/*.properties"/>
     <!-- 简化配置：
     (1)自动注册DefaultAnnotationHandlerMapping,AnnotationMethodHandlerAdapter
     (2)提供一些列：数据绑定，数字和日期的format @NumberFormat, @DateTimeFormat, xml,json默认读写支持
@@ -15,6 +17,14 @@
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="prefix" value="/WEB-INF/jsp/"/>
         <property name="suffix" value=".jsp"/>
+    </bean>
+    <!--配置多媒体解析器,支持文件上传-->
+    <bean id="multipartResolver"
+          class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+        <!-- 设定默认编码 -->
+        <property name="defaultEncoding" value="UTF-8"/>
+        <!-- 设定文件上传的最大值5MB，5*1024*1024 -->
+        <property name="maxUploadSize" value="5242880"/>
     </bean>
     <!-- 静态资源默认servlet配置
     (1)加入对静态资源的处理：js,gif,png
