@@ -6,7 +6,7 @@ import java.util.List;
 import org.apache.ibatis.annotations.Param;
 
 public interface TbOrderShippingMapper {
-    int countByExample(TbOrderShippingExample example);
+    long countByExample(TbOrderShippingExample example);
 
     int deleteByExample(TbOrderShippingExample example);
 
