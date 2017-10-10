@@ -23,5 +23,4 @@
 			<bean class="com.taotao.portal.interceptor.LoginInterceptor"/>
 		</mvc:interceptor>
 	</mvc:interceptors>
-	
 </beans>
