@@ -41,7 +41,7 @@ public class OrderServiceImpl implements OrderService {
 	public OrderCart getOrderCart(Long userId, HttpServletRequest request, HttpServletResponse response) {
 		//根据id查询用户的配送地址列表（未实现）
 		//从cookie中取商品列表
-		List<Item> list = cartServiceImpl.getItemListFromCart(request, response);
+		List<Item> list = cartServiceImpl.getCatItemList(request);
 		OrderCart orderCart = new OrderCart();
 		orderCart.setItemList(list);
 		return orderCart;

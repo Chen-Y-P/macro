@@ -28,7 +28,7 @@ public class ItemCatController {
 	@Autowired
 	private ItemCatService itemCatService;
 	
-	/*@RequestMapping("/list")
+	@RequestMapping("/list")
 	@ResponseBody
 	public Object getItemCatList(String callback) {
 		ItemCatResult result = itemCatService.getItemCatList();
@@ -39,19 +39,19 @@ public class ItemCatController {
 		//jsonp包装
 		MappingJacksonValue mappingJacksonValue = new MappingJacksonValue(result);
 		mappingJacksonValue.setJsonpFunction(callback);
-		
+
 		return mappingJacksonValue;
-	}*/
-	//jsonp第二种方法
-	@RequestMapping(value="/list", produces=MediaType.APPLICATION_JSON_VALUE+";charset=utf-8")
-	@ResponseBody
-	public String getItemCatList(String callback) {
-		ItemCatResult result = itemCatService.getItemCatList();
-		//判断是否是jsonp调用
-		if (StringUtils.isBlank(callback)) {
-			return JsonUtils.objectToJson(result);
-		}
-		
-		return callback + "(" + JsonUtils.objectToJson(result) + ");";
 	}
+//	//jsonp第二种方法
+//	@RequestMapping(value="/list", produces=MediaType.APPLICATION_JSON_VALUE+";charset=utf-8")
+//	@ResponseBody
+//	public String getItemCatList(String callback) {
+//		ItemCatResult result = itemCatService.getItemCatList();
+//		//判断是否是jsonp调用
+//		if (StringUtils.isBlank(callback)) {
+//			return JsonUtils.objectToJson(result);
+//		}
+//
+//		return callback + "(" + JsonUtils.objectToJson(result) + ");";
+//	}
 }

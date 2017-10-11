@@ -36,11 +36,6 @@ public class CartController {
 	 * 添加购物车商品
 	 * <p>Title: addCartItem</p>
 	 * <p>Description: </p>
-	 * @param itemId
-	 * @param itemNum
-	 * @param request
-	 * @param response
-	 * @return
 	 */
 	@RequestMapping("/add/{itemId}")
 	public String addCartItem(@PathVariable Long itemId, Integer itemNum,
@@ -56,8 +51,6 @@ public class CartController {
 	 * 展示购物车商品
 	 * <p>Title: showCart</p>
 	 * <p>Description: </p>
-	 * @param model
-	 * @return
 	 */
 	@RequestMapping("/cart")
 	public String showCart(Model model, HttpServletRequest request) {
@@ -65,11 +58,28 @@ public class CartController {
 		model.addAttribute("cartList", list);
 		return "cart";
 	}
+
+	/**
+	 * 修改购物车商品数量
+	 * @param itemId 商品的id
+	 * @param itemNum 商品的数量
+	 */
 	@RequestMapping("/update/num/{itemId}/{itemNum}")
 	@ResponseBody
 	public TaotaoResult updateItemNum(@PathVariable Long itemId, @PathVariable Integer itemNum,
 			HttpServletRequest request, HttpServletResponse response) {
 		TaotaoResult result = cartService.updateItemNum(itemId, itemNum, request, response);
 		return result;
+	}
+
+	/**
+	 * 删除购物车中指定商品
+	 * @param itemId 商品的id
+	 */
+	@RequestMapping("/delete/{itemId}")
+	public String deleteCartItem(@PathVariable Long itemId,
+								 HttpServletResponse response, HttpServletRequest request) {
+		cartService.deleteCartItem(itemId, request, response);
+		return "redirect:/cart/cart.html";
 	}
 }

@@ -54,7 +54,7 @@ public class OrderServiceImpl implements OrderService {
 		//补全订单信息
 		orderInfo.setOrderId(orderId.toString());
 		//支付类型，1、在线支付，2、货到付款
-		orderInfo.setPaymentType(1);
+		orderInfo.setPaymentType(2);
 		//状态：1、未付款，2、已付款，3、未发货，4、已发货，5、交易成功，6、交易关闭
 		orderInfo.setStatus(1);
 		Date date = new Date();
