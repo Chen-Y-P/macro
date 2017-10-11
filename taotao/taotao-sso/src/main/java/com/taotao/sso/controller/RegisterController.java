@@ -44,8 +44,4 @@ public class RegisterController {
 		}
 	}
 	
-	@RequestMapping("/page/register")
-	public String showRegister() {
-		return "register";
-	}
 }

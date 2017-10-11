@@ -27,11 +27,4 @@ public class LoginController {
 		return result;
 	}
 	
-	@RequestMapping("/user/page/login")
-	public String showRegister(String redirect, Model model) {
-		//把url参数传递到jsp
-		model.addAttribute("redirect", redirect);
-		return "login";
-	}
-	
 }
