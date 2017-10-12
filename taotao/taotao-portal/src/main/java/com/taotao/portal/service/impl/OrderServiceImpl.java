@@ -1,21 +1,12 @@
 package com.taotao.portal.service.impl;
 
-import java.util.List;
-
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.stereotype.Service;
-
 import com.taotao.common.pojo.TaotaoResult;
 import com.taotao.common.utils.HttpClientUtil;
 import com.taotao.common.utils.JsonUtils;
-import com.taotao.portal.pojo.Item;
-import com.taotao.portal.pojo.OrderCart;
 import com.taotao.portal.pojo.OrderInfo;
 import com.taotao.portal.service.OrderService;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Service;
 
 /**
  * 订单管理
@@ -29,23 +20,11 @@ import com.taotao.portal.service.OrderService;
 @Service
 public class OrderServiceImpl implements OrderService {
 
-	@Autowired
-	private CartServiceImpl cartServiceImpl; 
 	@Value("${ORDER_BASE_URL}")
 	private String ORDER_BASE_URL;
 	@Value("${ORDER_CREATE_URL}")
 	private String ORDER_CREATE_URL;
-	
-	
-	@Override
-	public OrderCart getOrderCart(Long userId, HttpServletRequest request, HttpServletResponse response) {
-		//根据id查询用户的配送地址列表（未实现）
-		//从cookie中取商品列表
-		List<Item> list = cartServiceImpl.getCatItemList(request);
-		OrderCart orderCart = new OrderCart();
-		orderCart.setItemList(list);
-		return orderCart;
-	}
+
 	@Override
 	public TaotaoResult createOrder(OrderInfo orderInfo) {
 		//先把orderInfo转换成json数据
