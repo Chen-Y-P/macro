@@ -1,11 +1,9 @@
 package com.taotao.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 import com.taotao.common.pojo.EasyUIDataGridResult;
 import com.taotao.common.pojo.TaotaoResult;
@@ -13,13 +11,20 @@ import com.taotao.pojo.TbItem;
 import com.taotao.pojo.TbItemDesc;
 import com.taotao.service.ItemService;
 
+import java.util.List;
+
 @Controller
 @RequestMapping("/item")
 public class ItemController {
 
 	@Autowired
 	private ItemService itemService;
-	
+
+	/**
+	 * 查询商品
+	 * @param itemId 商品的id
+	 * @return 商品信息
+	 */
 	@RequestMapping("/{itemId}")
 	@ResponseBody
 	public TbItem getItemById(@PathVariable(value="itemId") Long itemId) {
@@ -27,12 +32,7 @@ public class ItemController {
 		return item;
 	}
 	/**
-	 * 查询商品列表
-	 * <p>Title: getItemList</p>
-	 * <p>Description: </p>
-	 * @param page
-	 * @param rows
-	 * @return
+	 * 分页查询商品列表
 	 */
 	@RequestMapping("/list")
 	@ResponseBody
@@ -44,7 +44,14 @@ public class ItemController {
 		return result;
 		
 	}
-	
+
+	/**
+	 * 新增商品
+	 * @param item 商品信息
+	 * @param desc 商品详情(html)
+	 * @param itemParams 商品的规格参数信息(json)
+	 * @return 响应结果
+	 */
 	@RequestMapping("/save")
 	@ResponseBody
 	//添加一个itemParams参数接收规格参数的数据。
@@ -54,5 +61,45 @@ public class ItemController {
 		TaotaoResult result = itemService.addItem(item, itemDesc, itemParams);
 		return result;
 	}
-	
+
+	/**
+	 * 获取商品的详情
+	 */
+	@RequestMapping("/desc/{itemId}")
+	@ResponseBody
+	public TaotaoResult getItemDesc(@PathVariable Long itemId){
+		TbItemDesc itemDesc = itemService.getItemDesc(itemId);
+		return TaotaoResult.ok(itemDesc);
+	}
+
+	/**
+	 * 批量删除商品
+	 * @param ids 商品id
+	 */
+	@RequestMapping(value = "/delete",method = RequestMethod.POST)
+	@ResponseBody
+	public TaotaoResult deleteItemByItemIds(@RequestParam("ids") List<Long> ids){
+		TaotaoResult taotaoResult = itemService.deleteItemByItemIds(ids);
+		return taotaoResult;
+	}
+
+	/**
+	 * 批量下架商品
+	 */
+	@RequestMapping(value = "/outstock",method = RequestMethod.POST)
+	@ResponseBody
+	public TaotaoResult outStockItems(@RequestParam("ids") List<Long> ids){
+		TaotaoResult taotaoResult = itemService.updateItemStatus(ids, new Byte("2"));
+		return taotaoResult;
+	}
+
+	/**
+	 * 批量上架商品
+	 */
+	@RequestMapping(value = "/instock",method = RequestMethod.POST)
+	@ResponseBody
+	public TaotaoResult inStockItems(@RequestParam("ids") List<Long> ids){
+		TaotaoResult taotaoResult = itemService.updateItemStatus(ids, new Byte("1"));
+		return taotaoResult;
+	}
 }

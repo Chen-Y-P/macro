@@ -1,5 +1,6 @@
 package com.taotao.service.impl;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.UUID;
 
@@ -38,6 +39,11 @@ public class PictureServiceImpl implements PictureService {
 	private String FTP_BASE_PATH;
 	@Value("${IMAGE_BASE_URL}")
 	private String IMAGE_BASE_URL;
+	//将文件上传到本地时使用的路径
+	@Value("${UPLOAD_IMAGE_PATH}")
+	private String UPLOAD_IMAGE_PATH;
+	@Value("${HTTP_IMAGE_PATH}")
+	private String HTTP_IMAGE_PATH;
 	
 
 	@Override
@@ -69,6 +75,29 @@ public class PictureServiceImpl implements PictureService {
 		//返回结果，生成一个可以访问到图片的url返回
 		
 		return PictureResult.ok(IMAGE_BASE_URL + filePath + "/" + imageName + ext);
+	}
+
+	@Override
+	public PictureResult uploadPictureLocal(MultipartFile uploadFile) {
+		//判断上传图片是否为空
+		if (null == uploadFile || uploadFile.isEmpty()) {
+			return PictureResult.error("上传图片为空");
+		}
+		//取文件扩展名
+		String originalFilename = uploadFile.getOriginalFilename();
+		String ext = originalFilename.substring(originalFilename.lastIndexOf("."));
+		//生成新文件名
+		//可以是时间+随机数生成文件名
+		String imageName = IDUtils.genImageName();
+		try {
+			uploadFile.transferTo(new File(UPLOAD_IMAGE_PATH+imageName+ext));
+		} catch (Exception e) {
+			e.printStackTrace();
+			return PictureResult.error(ExceptionUtil.getStackTrace(e));
+		}
+		//返回结果，生成一个可以访问到图片的url返回
+
+		return PictureResult.ok(HTTP_IMAGE_PATH + imageName + ext);
 	}
 
 }

@@ -29,19 +29,10 @@ public class ItemParamItemServiceImpl implements ItemParamItemService {
 	private TbItemParamItemMapper itemParamItemMapper;
 	
 	@Override
-	public String getItemParemById(long itemId) {
-		
-		//创建查询条件
-		TbItemParamItemExample example = new TbItemParamItemExample();
-		Criteria criteria = example.createCriteria();
-		criteria.andItemIdEqualTo(itemId);
-		List<TbItemParamItem> list = itemParamItemMapper.selectByExampleWithBLOBs(example);
-		//如果没有取到规格参数返回空串。
-		if (null == list || list.isEmpty()) {
-			return "";
-		}
+	public String getItemParamDataById(long itemId) {
 		//取到规格参数
-		TbItemParamItem itemParamItem = list.get(0);
+		TbItemParamItem itemParamItem = getItemParamById(itemId);
+		if(itemParamItem==null)return null;
 		String paramData = itemParamItem.getParamData();
 		//把规格参数信息转换成java对象
 		List<Map> paramList = JsonUtils.jsonToList(paramData, Map.class);
@@ -65,6 +56,23 @@ public class ItemParamItemServiceImpl implements ItemParamItemService {
 		sb.append("     </tbody>\n");
 		sb.append("</table>");
 		return sb.toString();
+	}
+
+	@Override
+	public TbItemParamItem getItemParamById(long itemId) {
+
+		//创建查询条件
+		TbItemParamItemExample example = new TbItemParamItemExample();
+		Criteria criteria = example.createCriteria();
+		criteria.andItemIdEqualTo(itemId);
+		List<TbItemParamItem> list = itemParamItemMapper.selectByExampleWithBLOBs(example);
+		//如果没有取到规格参数返回空串。
+		if (null == list || list.isEmpty()) {
+			return null;
+		}
+		//取到规格参数
+		TbItemParamItem itemParamItem = list.get(0);
+		return itemParamItem;
 	}
 
 }

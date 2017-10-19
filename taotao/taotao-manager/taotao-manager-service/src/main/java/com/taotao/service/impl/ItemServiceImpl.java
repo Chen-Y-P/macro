@@ -3,6 +3,7 @@ package com.taotao.service.impl;
 import java.util.Date;
 import java.util.List;
 
+import com.taotao.pojo.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -15,11 +16,7 @@ import com.taotao.common.utils.IDUtils;
 import com.taotao.mapper.TbItemDescMapper;
 import com.taotao.mapper.TbItemMapper;
 import com.taotao.mapper.TbItemParamItemMapper;
-import com.taotao.pojo.TbItem;
-import com.taotao.pojo.TbItemDesc;
-import com.taotao.pojo.TbItemExample;
 import com.taotao.pojo.TbItemExample.Criteria;
-import com.taotao.pojo.TbItemParamItem;
 import com.taotao.service.ItemService;
 
 @Service
@@ -97,6 +94,39 @@ public class ItemServiceImpl implements ItemService {
 			return TaotaoResult.build(500, ExceptionUtil.getStackTrace(e));
 		}
 		
+		return TaotaoResult.ok();
+	}
+
+	@Override
+	public TaotaoResult deleteItemByItemIds(List<Long> itemIds) {
+		try {
+			TbItemExample example = new TbItemExample();
+			example.createCriteria().andIdIn(itemIds);
+			itemMapper.deleteByExample(example);
+		} catch (Exception e) {
+			e.printStackTrace();
+			return TaotaoResult.build(500, ExceptionUtil.getStackTrace(e));
+		}
+		return TaotaoResult.ok();
+	}
+
+	@Override
+	public TbItemDesc getItemDesc(Long itemId) {
+		return itemDescMapper.selectByPrimaryKey(itemId);
+	}
+
+	@Override
+	public TaotaoResult updateItemStatus(List<Long> itemIds, Byte status) {
+		try {
+			TbItemExample example = new TbItemExample();
+			example.createCriteria().andIdIn(itemIds);
+			TbItem tbItem = new TbItem();
+			tbItem.setStatus(status);
+			itemMapper.updateByExampleSelective(tbItem,example);
+		} catch (Exception e) {
+			e.printStackTrace();
+			return TaotaoResult.build(500,ExceptionUtil.getStackTrace(e));
+		}
 		return TaotaoResult.ok();
 	}
 

@@ -16,4 +16,5 @@ import com.taotao.common.pojo.PictureResult;
 public interface PictureService {
 
 	PictureResult uploadPicture(MultipartFile uploadFile);
+	PictureResult uploadPictureLocal(MultipartFile uploadFile);
 }
