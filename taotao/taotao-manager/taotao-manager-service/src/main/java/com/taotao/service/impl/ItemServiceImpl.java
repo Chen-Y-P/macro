@@ -47,8 +47,6 @@ public class ItemServiceImpl implements ItemService {
 		//执行查询
 		TbItemExample example = new TbItemExample();
 		//添加条件
-		//Criteria criteria = example.createCriteria();
-		//criteria.andIdEqualTo(123l);
 		List<TbItem> list = itemMapper.selectByExample(example);
 		//取total
 		PageInfo<TbItem> pageInfo = new PageInfo<>(list);
@@ -94,6 +92,39 @@ public class ItemServiceImpl implements ItemService {
 			return TaotaoResult.build(500, ExceptionUtil.getStackTrace(e));
 		}
 		
+		return TaotaoResult.ok();
+	}
+
+	@Override
+	public TaotaoResult updateItem(TbItem item, String desc, String itemParams) {
+		try {
+			Date date = new Date();
+			item.setUpdated(date);
+			Long itemId = item.getId();
+			//更新item信息
+			itemMapper.updateByPrimaryKeySelective(item);
+			//更新itemDesc信息
+			itemDescMapper.deleteByPrimaryKey(itemId);
+			TbItemDesc tbItemDesc = new TbItemDesc();
+			tbItemDesc.setItemId(itemId);
+			tbItemDesc.setItemDesc(desc);
+			tbItemDesc.setCreated(date);
+			tbItemDesc.setUpdated(date);
+			itemDescMapper.insert(tbItemDesc);
+			//更新itemParamItem信息
+			TbItemParamItemExample example = new TbItemParamItemExample();
+			example.createCriteria().andItemIdEqualTo(itemId);
+			itemParamItemMapper.deleteByExample(example);
+			TbItemParamItem tbItemParamItem = new TbItemParamItem();
+			tbItemParamItem.setItemId(itemId);
+			tbItemParamItem.setCreated(date);
+			tbItemParamItem.setUpdated(date);
+			tbItemParamItem.setParamData(itemParams);
+			itemParamItemMapper.insert(tbItemParamItem);
+		} catch (Exception e) {
+			e.printStackTrace();
+			TaotaoResult.build(500,ExceptionUtil.getStackTrace(e));
+		}
 		return TaotaoResult.ok();
 	}
 

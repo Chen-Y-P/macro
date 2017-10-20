@@ -8,5 +8,7 @@ import com.taotao.common.pojo.TreeNode;
 public interface ContentCatService {
 
 	List<TreeNode> getContentCatList(long parentId);
-	TaotaoResult createNode(long parentId, String name);
+	TaotaoResult createContentCat(long parentId, String name);
+	TaotaoResult updateContentCat(long id, String name);
+	TaotaoResult deleteContentCat(long parentId, long id);
 }

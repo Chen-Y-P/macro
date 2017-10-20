@@ -11,19 +11,16 @@ import com.taotao.common.utils.JsonUtils;
 import com.taotao.service.PictureService;
 
 /**
- * 图片上传controller
- * <p>Title: PictureController</p>
- * <p>Description: </p>
- * <p>Company: www.itcast.com</p> 
- * @author	入云龙
- * @date	2015年8月15日下午3:47:08
- * @version 1.0
+ * 图片上传
  */
 @Controller
 public class PictureController {
 	@Autowired
 	private PictureService pictureService;
-	
+
+	/**
+	 * 图片上传功能
+	 */
 	@RequestMapping("/pic/upload")
 	@ResponseBody
 	public String upload(MultipartFile uploadFile) {

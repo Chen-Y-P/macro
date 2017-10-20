@@ -11,6 +11,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import com.taotao.service.ItemParamItemService;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+/**
+ * 商品的详情参数管理
+ */
 @Controller
 public class ItemParamItemController {
 

@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import com.taotao.common.utils.ExceptionUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -38,7 +39,7 @@ public class ContentCatServiceImpl implements ContentCatService {
 	}
 	
 	@Override
-	public TaotaoResult createNode(long parentId, String name) {
+	public TaotaoResult createContentCat(long parentId, String name) {
 		//创建一内容分类pojo
 		TbContentCategory node = new TbContentCategory();
 		node.setName(name);
@@ -65,6 +66,42 @@ public class ContentCatServiceImpl implements ContentCatService {
 		}
 		//返回结果
 		return TaotaoResult.ok(node);
+	}
+
+	@Override
+	public TaotaoResult updateContentCat(long id, String name) {
+		try {
+			TbContentCategory tbContentCategory = new TbContentCategory();
+			tbContentCategory.setId(id);
+			tbContentCategory.setName(name);
+			tbContentCategory.setUpdated(new Date());
+			contentCategoryMapper.updateByPrimaryKeySelective(tbContentCategory);
+		} catch (Exception e) {
+			e.printStackTrace();
+			ExceptionUtil.getStackTrace(e);
+		}
+		return TaotaoResult.ok();
+	}
+
+	@Override
+	public TaotaoResult deleteContentCat(long parentId, long id) {
+		try {
+			contentCategoryMapper.deleteByPrimaryKey(id);
+			TbContentCategoryExample example = new TbContentCategoryExample();
+			example.createCriteria().andParentIdEqualTo(parentId);
+			List<TbContentCategory> tbContentCategories = contentCategoryMapper.selectByExample(example);
+			if(tbContentCategories==null||tbContentCategories.size()==0){
+                TbContentCategory tbContentCategory = new TbContentCategory();
+                tbContentCategory.setId(parentId);
+                tbContentCategory.setUpdated(new Date());
+                tbContentCategory.setIsParent(false);
+                contentCategoryMapper.updateByPrimaryKeySelective(tbContentCategory);
+            }
+		} catch (Exception e) {
+			e.printStackTrace();
+			TaotaoResult.build(500,ExceptionUtil.getStackTrace(e));
+		}
+		return TaotaoResult.ok();
 	}
 
 }

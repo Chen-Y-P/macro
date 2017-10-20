@@ -13,6 +13,9 @@ import com.taotao.service.ItemService;
 
 import java.util.List;
 
+/**
+ * 商品管理
+ */
 @Controller
 @RequestMapping("/item")
 public class ItemController {
@@ -54,12 +57,21 @@ public class ItemController {
 	 */
 	@RequestMapping("/save")
 	@ResponseBody
-	//添加一个itemParams参数接收规格参数的数据。
 	public TaotaoResult addItem(TbItem item, String desc, String itemParams) {
 		TbItemDesc itemDesc = new TbItemDesc();
 		itemDesc.setItemDesc(desc);
 		TaotaoResult result = itemService.addItem(item, itemDesc, itemParams);
 		return result;
+	}
+
+	/**
+	 * 修改商品
+	 */
+	@RequestMapping(value = "/update",method = RequestMethod.POST)
+	@ResponseBody
+	public TaotaoResult updateItem(TbItem item, String desc, String itemParams){
+		TaotaoResult taotaoResult = itemService.updateItem(item, desc, itemParams);
+		return taotaoResult;
 	}
 
 	/**

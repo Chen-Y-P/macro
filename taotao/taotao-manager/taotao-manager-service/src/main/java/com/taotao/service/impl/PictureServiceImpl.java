@@ -15,15 +15,6 @@ import com.taotao.common.utils.FtpUtil;
 import com.taotao.common.utils.IDUtils;
 import com.taotao.service.PictureService;
 
-/**
- * 上传图片处理服务实现类
- * <p>Title: PictureService</p>
- * <p>Description: </p>
- * <p>Company: www.itcast.com</p> 
- * @author	入云龙
- * @date	2015年8月15日下午2:59:38
- * @version 1.0
- */
 @Service
 public class PictureServiceImpl implements PictureService {
 	

@@ -1,7 +1,12 @@
 package com.taotao.service.impl;
 
 import java.util.Date;
+import java.util.List;
 
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
+import com.taotao.common.pojo.EasyUIDataGridResult;
+import com.taotao.pojo.TbContentExample;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -11,15 +16,6 @@ import com.taotao.mapper.TbContentMapper;
 import com.taotao.pojo.TbContent;
 import com.taotao.service.ContentService;
 
-/**
- * 内容管理Service
- * <p>Title: ContentServiceImpl</p>
- * <p>Description: </p>
- * <p>Company: www.itcast.com</p> 
- * @author	入云龙
- * @date	2015年8月19日上午11:20:03
- * @version 1.0
- */
 @Service
 public class ContentServiceImpl implements ContentService {
 
@@ -40,6 +36,19 @@ public class ContentServiceImpl implements ContentService {
 		}
 		
 		return TaotaoResult.ok();
+	}
+
+	@Override
+	public EasyUIDataGridResult getContentList(Integer page, Integer rows, Long categoryId) {
+		PageHelper.startPage(page,rows);
+		TbContentExample example = new TbContentExample();
+		if(categoryId!=0){
+			example.createCriteria().andCategoryIdEqualTo(categoryId);
+		}
+		List<TbContent> tbContents = contentMapper.selectByExample(example);
+		PageInfo<TbContent> pageInfo = new PageInfo<>(tbContents);
+		EasyUIDataGridResult result = new EasyUIDataGridResult(pageInfo.getTotal(),pageInfo.getList());
+		return result;
 	}
 
 }
