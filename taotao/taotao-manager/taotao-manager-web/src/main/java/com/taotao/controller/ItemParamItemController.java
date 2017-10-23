@@ -19,7 +19,12 @@ public class ItemParamItemController {
 
 	@Autowired
 	private ItemParamItemService itemParamItemService;
-	
+
+	/**
+	 * 获取某个商品的规格参数
+	 * @param itemId 商品的id
+	 * @return 逻辑视图
+	 */
 	@RequestMapping("/showParam/{itemId}")
 	public String showParam(@PathVariable Long itemId, Model model) {
 		String string = itemParamItemService.getItemParamDataById(itemId);
@@ -27,6 +32,9 @@ public class ItemParamItemController {
 		return "item-param";
 	}
 
+	/**
+	 * 获取某个商品的规格参数（json格式数据）
+	 */
 	@RequestMapping("/item/param/item/{itemId}")
 	@ResponseBody
 	public TaotaoResult getItemParamItem(@PathVariable Long itemId){

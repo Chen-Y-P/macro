@@ -51,4 +51,29 @@ public class ContentServiceImpl implements ContentService {
 		return result;
 	}
 
+	@Override
+	public TaotaoResult deleteContent(List<Long> ids) {
+		try {
+			TbContentExample example = new TbContentExample();
+			example.createCriteria().andIdIn(ids);
+			contentMapper.deleteByExample(example);
+		} catch (Exception e) {
+			e.printStackTrace();
+			return TaotaoResult.build(500,ExceptionUtil.getStackTrace(e));
+		}
+		return TaotaoResult.ok();
+	}
+
+	@Override
+	public TaotaoResult updateContent(TbContent tbContent) {
+		try {
+			tbContent.setUpdated(new Date());
+			contentMapper.updateByPrimaryKeyWithBLOBs(tbContent);
+		} catch (Exception e) {
+			e.printStackTrace();
+			return TaotaoResult.build(500,ExceptionUtil.getStackTrace(e));
+		}
+		return TaotaoResult.ok();
+	}
+
 }

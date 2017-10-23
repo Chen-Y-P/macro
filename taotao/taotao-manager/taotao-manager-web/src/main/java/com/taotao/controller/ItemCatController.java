@@ -20,7 +20,11 @@ public class ItemCatController {
 
 	@Autowired
 	private ItemCatService itemCatService;
-	
+
+	/**
+	 * 查询某个分类下的子分类
+	 * @param parentId 父分类的id
+	 */
 	@RequestMapping("/list")
 	@ResponseBody
 	public List<TreeNode> getItemCatList(@RequestParam(value="id", defaultValue="0")Long parentId) {
