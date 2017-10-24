@@ -8,9 +8,9 @@
   <head>
    <meta http-equiv="pragma" content="no-cache" />
    <meta http-equiv="cache-control" content="no-cache" />
-   <meta http-equiv="expires" content="0" /> 
-   <meta name="format-detection" content="telephone=no" />  
-   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" /> 
+   <meta http-equiv="expires" content="0" />
+   <meta name="format-detection" content="telephone=no" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
    <meta name="format-detection" content="telephone=no" />
    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
    <link type="text/css" rel="stylesheet" href="/css/base.css" />
@@ -39,7 +39,7 @@
 	<div class="m m3 msop">
         <div class="mt" id="success_tittle"><s class="icon-succ02"></s><h3 class="ftx-02">感谢您，订单提交成功！</h3>
 		</div>
-		<div class="mc" id="success_detail">	
+		<div class="mc" id="success_detail">
 		    <ul class="list-order">
 			    <li class="li-st">
 					<div class="fore1">订单号：<a href="javascript:void(0)">${orderId }</a></div>
@@ -63,5 +63,5 @@
     <jsp:include page="commons/footer-links.jsp"></jsp:include>
     <!-- links end -->
 </div><!-- footer end -->
-     </body> 
+     </body>
 </html>

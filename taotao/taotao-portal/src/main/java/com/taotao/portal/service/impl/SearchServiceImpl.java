@@ -13,12 +13,6 @@ import com.taotao.portal.service.SearchService;
 
 /**
  * 查询服务
- * <p>Title: SearchServiceImpl</p>
- * <p>Description: </p>
- * <p>Company: www.itcast.com</p> 
- * @author	入云龙
- * @date	2015年8月22日下午4:51:50
- * @version 1.0
  */
 @Service
 public class SearchServiceImpl implements SearchService {

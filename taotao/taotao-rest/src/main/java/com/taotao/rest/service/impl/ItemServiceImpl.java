@@ -23,19 +23,6 @@ import redis.clients.jedis.Jedis;
 
 /**
  * 商品信息服务
- * <p>
- * Title: ItemServiceImpl
- * </p>
- * <p>
- * Description:
- * </p>
- * <p>
- * Company: www.itcast.com
- * </p>
- * 
- * @author 入云龙
- * @date 2015年8月24日上午9:38:13
- * @version 1.0
  */
 @Service
 public class ItemServiceImpl implements ItemService {

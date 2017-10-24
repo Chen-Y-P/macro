@@ -20,21 +20,7 @@ import com.taotao.portal.service.CartService;
 
 /**
  * 购物车服务
- * <p>
- * Title: CartServiceImpl
- * </p>
- * <p>
- * Description:
- * </p>
- * <p>
- * Company: www.itcast.com
- * </p>
- * 
- * @author 入云龙
- * @date 2015年8月27日上午9:32:21
- * @version 1.0
  */
-
 @Service
 public class CartServiceImpl implements CartService {
 

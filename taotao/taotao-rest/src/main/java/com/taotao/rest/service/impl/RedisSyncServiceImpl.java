@@ -10,12 +10,6 @@ import com.taotao.rest.service.RedisSyncService;
 
 /**
  * 同步缓存方法
- * <p>Title: RedisSyncServiceImpl</p>
- * <p>Description: </p>
- * <p>Company: www.itcast.com</p> 
- * @author	入云龙
- * @date	2015年8月21日下午3:56:46
- * @version 1.0
  */
 @Service
 public class RedisSyncServiceImpl implements RedisSyncService {
