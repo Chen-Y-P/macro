@@ -139,10 +139,12 @@ pageConfig.DATA_MScroll = dataMScroll;
 </div>
 <div class="mc">
 	<ul>
-		<li class="odd" clstag="homepage|keycount|home2013|11b1"><a href="http://club.jr.jd.com/girls/jingxuan" target="_blank" title="38女人节得3800理财金">38女人节得3800理财金</a></li>
-				<li clstag="homepage|keycount|home2013|11b1"><a href="http://sale.jd.com/act/U0jwsxIFrmO.html" target="_blank" title="开学季音像299减99">开学季音像299减99</a></li>
-				<li class="odd" clstag="homepage|keycount|home2013|11b1"><a href="http://sale.jd.com/act/Kz4QnjJMuL.html" target="_blank" title="情定金生相约钻石婚">情定金生相约钻石婚</a></li>
-				<li clstag="homepage|keycount|home2013|11b1"><a href="http://sale.jd.com/act/Z5o4RNyF2Uv.html" target="_blank" title="爆款造型品 扮靓美人计">爆款造型品 扮靓美人计</a></li>
+		<c:forEach items="${quickReportItemList}" var="quickReportItem" varStatus="quickStatus">
+			<li clstag="homepage|keycount|home2013|11b1" ${quickStatus.index%2==0?"class='odd'":""} >
+				<a href="${quickReportItem.url}" target="_blank" title="${quickReportItem.title}">${quickReportItem.title}
+				</a>
+			</li>
+		</c:forEach>
 	</ul>
 </div>
 </div>
@@ -187,11 +189,11 @@ pageConfig.DATA_MScroll = dataMScroll;
 
 <div id="floors-list">
 	<!-- 家电通讯楼层 start-->
-    <c:forEach var="floorItem" items="${floorItemList}">
+    <c:forEach var="floorItem" items="${floorItemList}" varStatus="floorStatus">
 	<div class="w w1" data-fid="0" id="electronics">
 		<div class="m m1 catalogue" data-lazyload="1">
 			<div class="mt ld">
-				<div class="floor"><b class="fixpng b b1"></b><b class="fixpng b b2"></b><b class="b b3">${floorItem.floorId}F</b><b
+				<div class="floor"><b class="fixpng b b1"></b><b class="fixpng b b2"></b><b class="b b3">${floorStatus.index+1}F</b><b
 						class="fixpng b4"></b></div>
 				<h2>${floorItem.cateName}</h2>
 			</div>

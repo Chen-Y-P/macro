@@ -6,7 +6,10 @@ import java.util.List;
 import java.util.Map;
 
 import com.taotao.portal.pojo.FloorItem;
+import com.taotao.portal.pojo.QuickReportItem;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
+import org.springframework.http.converter.json.MappingJacksonValue;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import com.taotao.common.utils.JsonUtils;
 import com.taotao.pojo.TbContent;
 import com.taotao.portal.service.ContentService;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 /**
  * 首页展示
@@ -46,6 +50,11 @@ public class IndexController {
 //		return "index";
 //	}
 
+	/**
+	 * 返回首页的测试数据
+	 * @param model
+	 * @return
+	 */
 	@RequestMapping("/index")
 	public String showIndex(Model model) {
 		String dataMSlide = contentService.getJsonContent("json/DATA_MSlide.json");
@@ -60,6 +69,15 @@ public class IndexController {
 		model.addAttribute("dataTopRight", dataTopRight);
 		List<FloorItem> floorItemList = contentService.getFloorItemList();
 		model.addAttribute("floorItemList",floorItemList);
+		List<QuickReportItem> quickReportItemList = contentService.getQuickReportItemList();
+		model.addAttribute("quickReportItemList",quickReportItemList);
 		return "index";
+	}
+
+	@RequestMapping(value = "/item/cat/list",produces=MediaType.APPLICATION_JSON_VALUE+";charset=utf-8")
+	@ResponseBody
+	public String showCate(String callback){
+		String dataCategory = contentService.getJsonContent("json/DATA_Category.json");
+		return callback+"("+dataCategory+");";
 	}
 }

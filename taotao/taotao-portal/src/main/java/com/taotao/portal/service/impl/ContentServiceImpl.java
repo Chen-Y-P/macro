@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.taotao.portal.pojo.FloorItem;
+import com.taotao.portal.pojo.QuickReportItem;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.Resource;
@@ -68,6 +69,16 @@ public class ContentServiceImpl implements ContentService {
 			floorItemList.add(floorItem);
 		}
 		return floorItemList;
+	}
+
+	@Override
+	public List<QuickReportItem> getQuickReportItemList() {
+		List<QuickReportItem> quickReportList = new ArrayList<>();
+		quickReportList.add(new QuickReportItem("38女人节得3800理财金","http://club.jr.jd.com/girls/jingxuan"));
+		quickReportList.add(new QuickReportItem("开学季音像299减99","http://sale.jd.com/act/U0jwsxIFrmO.html"));
+		quickReportList.add(new QuickReportItem("情定金生相约钻石婚","http://sale.jd.com/act/Kz4QnjJMuL.html"));
+		quickReportList.add(new QuickReportItem("爆款造型品 扮靓美人计","http://sale.jd.com/act/Z5o4RNyF2Uv.html"));
+		return quickReportList;
 	}
 
 	private List<FloorItem.BrandAd> getBrandAdList() {
