@@ -20,12 +20,6 @@ import com.taotao.search.mapper.ItemMapper;
 
 /**
  * 搜索索引库
- * <p>Title: ItemDaoImpl</p>
- * <p>Description: </p>
- * <p>Company: www.itcast.com</p> 
- * @author	入云龙
- * @date	2015年8月22日下午3:08:34
- * @version 1.0
  */
 @Repository
 public class ItemDaoImpl implements ItemDao {

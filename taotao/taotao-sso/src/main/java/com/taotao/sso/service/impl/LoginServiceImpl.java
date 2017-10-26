@@ -6,6 +6,7 @@ import java.util.UUID;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.taotao.common.utils.ExceptionUtil;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -67,6 +68,19 @@ public class LoginServiceImpl implements LoginService {
 		CookieUtils.setCookie(request, response, TT_TOKEN, token);
 		//返回token
 		return TaotaoResult.ok(token);
+	}
+
+	@Override
+	public TaotaoResult logout(HttpServletRequest request, HttpServletResponse response) {
+		try {
+			String token = CookieUtils.getCookieValue(request,TT_TOKEN);
+			jedisClient.del(REDIS_SESSION_KEY+":"+token);
+			CookieUtils.deleteCookie(request,response,token);
+		} catch (Exception e) {
+			e.printStackTrace();
+			TaotaoResult.build(500,ExceptionUtil.getStackTrace(e));
+		}
+		return TaotaoResult.ok();
 	}
 
 }

@@ -16,18 +16,22 @@ public class SearchController {
 
 	@Autowired
 	private SearchService searchService;
-	
+
+	/**
+	 * 关键字搜索
+	 * @param queryString 搜索的关键字
+	 * @param page 页数
+	 */
 	@RequestMapping("/search")
-	public String search( @RequestParam("q") String queryString, 
+	public String search(@RequestParam("q") String queryString,
 			@RequestParam(defaultValue="1") Long page, Model model) throws Exception {
 		//解决乱码问题
-		queryString = new String(queryString.getBytes("iso8859-1"), "utf-8");
+//		queryString = new String(queryString.getBytes("iso8859-1"), "utf-8");
 		SearchResult searchResult = searchService.search(queryString, page);
 		model.addAttribute("query", queryString);
 		model.addAttribute("totalPages", searchResult.getPageCount());
 		model.addAttribute("itemList", searchResult.getItemList());
 		model.addAttribute("page", searchResult.getPage());
-		
 		return "search";
 	}
 }

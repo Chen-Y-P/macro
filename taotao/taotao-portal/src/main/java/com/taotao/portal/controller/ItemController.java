@@ -30,15 +30,15 @@ public class ItemController {
 	@RequestMapping(value="/item/desc/{itemId}", produces=MediaType.TEXT_HTML_VALUE+";charset=utf-8")
 	@ResponseBody
 	private String getItemDesc(@PathVariable Long itemId) {
-		String string = itemService.getItemDesc(itemId);
-		return string;
+		String result = itemService.getItemDesc(itemId);
+		return result;
 	}
 	
 	@RequestMapping(value="/item/param/{itemId}", produces=MediaType.TEXT_HTML_VALUE+";charset=utf-8")
 	@ResponseBody
 	private String getItemParam(@PathVariable Long itemId) {
-		String string = itemService.getItemParam(itemId);
-		return string;
+		String result = itemService.getItemParam(itemId);
+		return result;
 	}
 	
 }

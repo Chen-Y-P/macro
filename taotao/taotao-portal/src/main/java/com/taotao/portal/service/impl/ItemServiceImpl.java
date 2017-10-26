@@ -79,6 +79,7 @@ public class ItemServiceImpl implements ItemService {
 			return "";
 		}
 		TbItemParamItem itemParamItem = (TbItemParamItem) result.getData();
+		if(itemParamItem==null)return "";
 		//取规格参数
 		String paramData = itemParamItem.getParamData();
 		//把规格参数json格式的数据转换成java对象

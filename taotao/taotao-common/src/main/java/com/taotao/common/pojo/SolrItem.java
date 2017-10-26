@@ -4,12 +4,6 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * 搜索商品结果中商品pojo
- * <p>Title: SolrItem</p>
- * <p>Description: </p>
- * <p>Company: www.itcast.com</p> 
- * @author	入云龙
- * @date	2015年8月22日上午11:27:04
- * @version 1.0
  */
 public class SolrItem {
 

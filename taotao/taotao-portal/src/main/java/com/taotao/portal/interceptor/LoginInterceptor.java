@@ -13,6 +13,10 @@ import com.taotao.pojo.TbUser;
 import com.taotao.portal.service.LoginService;
 import com.taotao.portal.service.impl.LoginServiceImpl;
 
+/**
+ * 登录验证拦截器
+ * 拦截访问/order/**的目录
+ */
 public class LoginInterceptor implements HandlerInterceptor {
 
 	@Autowired
@@ -20,14 +24,6 @@ public class LoginInterceptor implements HandlerInterceptor {
 	
 	/**
 	 * 用户访问url之前执行
-	 * <p>Title: preHandle</p>
-	 * <p>Description: </p>
-	 * @param request
-	 * @param response
-	 * @param handler
-	 * @return
-	 * @throws Exception
-	 * @see org.springframework.web.servlet.HandlerInterceptor#preHandle(javax.servlet.http.HttpServletRequest, javax.servlet.http.HttpServletResponse, java.lang.Object)
 	 */
 	@Override
 	public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler)
@@ -59,15 +55,12 @@ public class LoginInterceptor implements HandlerInterceptor {
 	@Override
 	public void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler,
 			ModelAndView modelAndView) throws Exception {
-		// TODO Auto-generated method stub
 
 	}
 
 	@Override
 	public void afterCompletion(HttpServletRequest request, HttpServletResponse response, Object handler, Exception ex)
 			throws Exception {
-		// TODO Auto-generated method stub
-
 	}
 	
 	private String getUrl(HttpServletRequest request) {
@@ -76,8 +69,8 @@ public class LoginInterceptor implements HandlerInterceptor {
 				+ request.getServerPort() 
 				+ request.getContextPath() 
 				+ request.getRequestURI(); 
-		String url2 = request.getRequestURL().toString();
-		System.out.println(url2);
+//		String url2 = request.getRequestURL().toString();
+//		System.out.println(url2);
 		return url;
 	}
 

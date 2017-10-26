@@ -28,23 +28,21 @@ public class CartController {
 	
 	/**
 	 * 添加购物车商品
-	 * <p>Title: addCartItem</p>
-	 * <p>Description: </p>
 	 */
 	@RequestMapping("/add/{itemId}")
 	public String addCartItem(@PathVariable Long itemId, Integer itemNum,
 			HttpServletRequest request, HttpServletResponse response) {
 		TaotaoResult result = cartService.addCartItem(itemId, itemNum, request, response);
 		if (result.getStatus() == 200) {
-			return "cart-success";
+			//跳转到加入购物车成功界面
+//			return "cart-success";
+			return "redirect:/cart/cart.html";
 		}
 		return "error/exception";
 	}
 	
 	/**
 	 * 展示购物车商品
-	 * <p>Title: showCart</p>
-	 * <p>Description: </p>
 	 */
 	@RequestMapping("/cart")
 	public String showCart(Model model, HttpServletRequest request) {

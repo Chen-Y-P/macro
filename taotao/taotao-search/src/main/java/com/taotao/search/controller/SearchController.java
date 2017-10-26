@@ -26,7 +26,7 @@ public class SearchController {
 		}
 		try {
 			//解决get乱码问题
-			queryString = new String(queryString.getBytes("iso8859-1"), "utf-8");
+//			queryString = new String(queryString.getBytes("iso8859-1"), "utf-8");
 			SearchResult searchResult = searchService.search(queryString, page, pageSize);
 			return TaotaoResult.ok(searchResult);
 		} catch (Exception e) {

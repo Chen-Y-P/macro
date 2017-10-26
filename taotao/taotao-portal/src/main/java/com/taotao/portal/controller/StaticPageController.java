@@ -9,12 +9,19 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+/**
+ * 页面静态化
+ */
 @Controller
 public class StaticPageController {
 
     @Autowired
     private StaticPageService staticPageService;
 
+    /**
+     * 静态化商品详情页
+     * @param itemId 商品的id
+     */
     @RequestMapping("/gen/item/{itemId}")
     @ResponseBody
     public TaotaoResult genItemPage(@PathVariable Long itemId) {

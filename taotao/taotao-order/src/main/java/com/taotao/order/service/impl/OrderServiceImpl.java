@@ -22,12 +22,6 @@ import sun.tools.jar.resources.jar;
 
 /**
  * 订单管理服务
- * <p>Title: OrderServiceImpl</p>
- * <p>Description: </p>
- * <p>Company: www.itcast.com</p> 
- * @author	入云龙
- * @date	2015年8月27日下午3:41:18
- * @version 1.0
  */
 @Service
 public class OrderServiceImpl implements OrderService {

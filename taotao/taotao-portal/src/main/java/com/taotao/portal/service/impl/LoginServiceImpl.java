@@ -1,12 +1,11 @@
 package com.taotao.portal.service.impl;
 
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.stereotype.Service;
-
 import com.taotao.common.pojo.TaotaoResult;
 import com.taotao.common.utils.HttpClientUtil;
 import com.taotao.pojo.TbUser;
 import com.taotao.portal.service.LoginService;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Service;
 
 @Service
 public class LoginServiceImpl implements LoginService {
