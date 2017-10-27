@@ -1,8 +1,11 @@
 package com.taotao.order.service.impl;
 
-import java.util.Date;
-import java.util.List;
+import java.util.*;
 
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
+import com.taotao.order.mapper.CustomOrderMapper;
+import com.taotao.pojo.*;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -15,10 +18,6 @@ import com.taotao.mapper.TbOrderShippingMapper;
 import com.taotao.order.dao.JedisClient;
 import com.taotao.order.pojo.OrderInfo;
 import com.taotao.order.service.OrderService;
-import com.taotao.pojo.TbOrderItem;
-import com.taotao.pojo.TbOrderShipping;
-
-import sun.tools.jar.resources.jar;
 
 /**
  * 订单管理服务
@@ -34,6 +33,8 @@ public class OrderServiceImpl implements OrderService {
 	private TbOrderShippingMapper orderShippingMapper;
 	@Autowired
 	private JedisClient jedisClient;
+	@Autowired
+	private CustomOrderMapper customOrderMapper;
 	@Value("${REDIS_ORDER_ID_KEY}")
 	private String REDIS_ORDER_ID_KEY;
 	@Value("${REDIS_ORDER_ID_BEGIN}")
@@ -75,8 +76,19 @@ public class OrderServiceImpl implements OrderService {
 		
 		return TaotaoResult.ok(orderId);
 	}
-	
-	private Long genOrderId() {
+
+    @Override
+    public TaotaoResult queryOrder(Long uid, Integer page, Integer rows) {
+		PageHelper.startPage(page,rows);
+		List<OrderInfo> orderInfoList = customOrderMapper.getOrderInfoByUid(uid);
+		PageInfo<OrderInfo> pageInfo = new PageInfo<>(orderInfoList);
+		Map map = new HashMap();
+		map.put("orderInfoList",orderInfoList);
+		map.put("total",pageInfo.getTotal());
+		return TaotaoResult.ok(map);
+    }
+
+    private Long genOrderId() {
 		//获得一个订单号
 		String oid = jedisClient.get(REDIS_ORDER_ID_KEY);
 		if (StringUtils.isBlank(oid)) {

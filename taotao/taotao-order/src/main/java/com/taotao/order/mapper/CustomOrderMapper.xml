@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.taotao.order.mapper.CustomOrderMapper">
+    <resultMap id="orderInfoResultMap" type="OrderInfo" autoMapping="true">
+        <id column="order_id" property="orderId"/>
+        <association property="orderShipping" javaType="TbOrderShipping" autoMapping="true">
+			<id column="order_id" property="orderId"/>
+        </association>
+        <collection property="orderItems" ofType="TbOrderItem" autoMapping="true">
+			<id column="id" property="id"/>
+        </collection>
+    </resultMap>
+    <select id="getOrderInfoByUid" parameterType="long" resultMap="orderInfoResultMap">
+	SELECT
+		*
+	FROM
+		tb_order
+	LEFT JOIN tb_order_shipping ON tb_order.order_id = tb_order_shipping.order_id
+	LEFT JOIN tb_order_item ON tb_order.order_id = tb_order_item.order_id
+	WHERE
+		user_id = #{uid}
+	</select>
+</mapper>
