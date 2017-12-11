@@ -69,14 +69,14 @@
       <file leaf-file-name="generatorConfig.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mybatis-generate/src/main/resources/generatorConfig.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="18" column="8" lean-forward="false" selection-start-line="18" selection-start-column="8" selection-end-line="20" selection-end-column="52" />
+            <state relative-caret-position="308">
+              <caret line="14" column="26" lean-forward="false" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mybatis-generate/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="352">
@@ -86,57 +86,189 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CityMapper.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mybatis-generate/src/main/java/com/macro/ssm/mapper/CityMapper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="550">
+              <caret line="28" column="6" lean-forward="false" selection-start-line="28" selection-start-column="6" selection-end-line="28" selection-end-column="6" />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CountryMapper.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mybatis-generate/src/main/java/com/macro/ssm/mapper/CountryMapper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="110">
+              <caret line="8" column="32" lean-forward="false" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="City.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mybatis-generate/src/main/java/com/macro/ssm/po/City.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="88">
+              <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+              <folding>
+                <element signature="e#213#214#0" expanded="false" />
+                <element signature="e#242#243#0" expanded="false" />
+                <element signature="e#285#286#0" expanded="false" />
+                <element signature="e#321#322#0" expanded="false" />
+                <element signature="e#352#353#0" expanded="false" />
+                <element signature="e#379#380#0" expanded="false" />
+                <element signature="e#419#420#0" expanded="false" />
+                <element signature="e#480#481#0" expanded="false" />
+                <element signature="e#515#516#0" expanded="false" />
+                <element signature="e#547#548#0" expanded="false" />
+                <element signature="e#596#597#0" expanded="false" />
+                <element signature="e#638#639#0" expanded="false" />
+                <element signature="e#673#674#0" expanded="false" />
+                <element signature="e#706#707#0" expanded="false" />
+                <element signature="e#756#757#0" expanded="false" />
+                <element signature="e#800#801#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CityExample.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mybatis-generate/src/main/java/com/macro/ssm/po/CityExample.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="88">
+              <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="false" />
+                <element signature="e#268#269#0" expanded="false" />
+                <element signature="e#324#325#0" expanded="false" />
+                <element signature="e#382#383#0" expanded="false" />
+                <element signature="e#432#433#0" expanded="false" />
+                <element signature="e#472#473#0" expanded="false" />
+                <element signature="e#508#509#0" expanded="false" />
+                <element signature="e#557#558#0" expanded="false" />
+                <element signature="e#597#598#0" expanded="false" />
+                <element signature="e#632#633#0" expanded="false" />
+                <element signature="e#663#664#0" expanded="false" />
+                <element signature="e#710#711#0" expanded="false" />
+                <element signature="e#745#746#0" expanded="false" />
+                <element signature="e#786#787#0" expanded="false" />
+                <element signature="e#828#829#0" expanded="false" />
+                <element signature="e#1697#1698#0" expanded="false" />
+                <element signature="e#1747#1748#0" expanded="false" />
+                <element signature="e#1798#1799#0" expanded="false" />
+                <element signature="e#1837#1838#0" expanded="false" />
+                <element signature="e#1885#1886#0" expanded="false" />
+                <element signature="e#1924#1925#0" expanded="false" />
+                <element signature="e#11326#11327#0" expanded="false" />
+                <element signature="e#11357#11358#0" expanded="false" />
+                <element signature="e#11726#11727#0" expanded="false" />
+                <element signature="e#11766#11767#0" expanded="false" />
+                <element signature="e#11802#11803#0" expanded="false" />
+                <element signature="e#11838#11839#0" expanded="false" />
+                <element signature="e#11880#11881#0" expanded="false" />
+                <element signature="e#11922#11923#0" expanded="false" />
+                <element signature="e#11960#11961#0" expanded="false" />
+                <element signature="e#11998#11999#0" expanded="false" />
+                <element signature="e#12040#12041#0" expanded="false" />
+                <element signature="e#12082#12083#0" expanded="false" />
+                <element signature="e#12125#12126#0" expanded="false" />
+                <element signature="e#12168#12169#0" expanded="false" />
+                <element signature="e#12208#12209#0" expanded="false" />
+                <element signature="e#12248#12249#0" expanded="false" />
+                <element signature="e#12290#12291#0" expanded="false" />
+                <element signature="e#12332#12333#0" expanded="false" />
+                <element signature="e#12974#12975#0" expanded="false" />
+                <element signature="e#13026#13027#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Country.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mybatis-generate/src/main/java/com/macro/ssm/po/Country.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="88">
+              <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+              <folding>
+                <element signature="e#195#196#0" expanded="false" />
+                <element signature="e#227#228#0" expanded="false" />
+                <element signature="e#276#277#0" expanded="false" />
+                <element signature="e#318#319#0" expanded="false" />
+                <element signature="e#352#353#0" expanded="false" />
+                <element signature="e#382#383#0" expanded="false" />
+                <element signature="e#428#429#0" expanded="false" />
+                <element signature="e#498#499#0" expanded="false" />
+                <element signature="e#533#534#0" expanded="false" />
+                <element signature="e#566#567#0" expanded="false" />
+                <element signature="e#616#617#0" expanded="false" />
+                <element signature="e#660#661#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CountryExample.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mybatis-generate/src/main/java/com/macro/ssm/po/CountryExample.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="88">
+              <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="false" />
+                <element signature="e#274#275#0" expanded="false" />
+                <element signature="e#330#331#0" expanded="false" />
+                <element signature="e#388#389#0" expanded="false" />
+                <element signature="e#438#439#0" expanded="false" />
+                <element signature="e#478#479#0" expanded="false" />
+                <element signature="e#514#515#0" expanded="false" />
+                <element signature="e#563#564#0" expanded="false" />
+                <element signature="e#603#604#0" expanded="false" />
+                <element signature="e#638#639#0" expanded="false" />
+                <element signature="e#669#670#0" expanded="false" />
+                <element signature="e#716#717#0" expanded="false" />
+                <element signature="e#751#752#0" expanded="false" />
+                <element signature="e#792#793#0" expanded="false" />
+                <element signature="e#834#835#0" expanded="false" />
+                <element signature="e#1703#1704#0" expanded="false" />
+                <element signature="e#1753#1754#0" expanded="false" />
+                <element signature="e#1804#1805#0" expanded="false" />
+                <element signature="e#1843#1844#0" expanded="false" />
+                <element signature="e#1891#1892#0" expanded="false" />
+                <element signature="e#1930#1931#0" expanded="false" />
+                <element signature="e#9467#9468#0" expanded="false" />
+                <element signature="e#9498#9499#0" expanded="false" />
+                <element signature="e#9867#9868#0" expanded="false" />
+                <element signature="e#9907#9908#0" expanded="false" />
+                <element signature="e#9943#9944#0" expanded="false" />
+                <element signature="e#9979#9980#0" expanded="false" />
+                <element signature="e#10021#10022#0" expanded="false" />
+                <element signature="e#10063#10064#0" expanded="false" />
+                <element signature="e#10101#10102#0" expanded="false" />
+                <element signature="e#10139#10140#0" expanded="false" />
+                <element signature="e#10181#10182#0" expanded="false" />
+                <element signature="e#10223#10224#0" expanded="false" />
+                <element signature="e#10266#10267#0" expanded="false" />
+                <element signature="e#10309#10310#0" expanded="false" />
+                <element signature="e#10349#10350#0" expanded="false" />
+                <element signature="e#10389#10390#0" expanded="false" />
+                <element signature="e#10431#10432#0" expanded="false" />
+                <element signature="e#10473#10474#0" expanded="false" />
+                <element signature="e#11115#11116#0" expanded="false" />
+                <element signature="e#11167#11168#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ssm/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-440">
+            <state relative-caret-position="286">
               <caret line="13" column="21" lean-forward="false" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="35" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PictureUploadController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ssm/src/main/java/com/macro/ssm/controller/PictureUploadController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
-              <caret line="22" column="26" lean-forward="false" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
-              <folding>
-                <element signature="imports" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PictureUploadService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ssm/src/main/java/com/macro/ssm/service/PictureUploadService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="9" column="28" lean-forward="false" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="28" />
-              <folding>
-                <element signature="imports" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PictureUploadServiceImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ssm/src/main/java/com/macro/ssm/service/impl/PictureUploadServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="15" column="27" lean-forward="false" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
-              <folding>
-                <element signature="imports" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="resource.properties" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ssm/src/main/resources/properties/resource.properties">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="55" />
               <folding />
             </state>
           </provider>
@@ -326,7 +458,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -658,9 +789,52 @@
               <option name="myItemId" value="ssm" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="po" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ssm-demo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mybatis-generate" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="macro" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ssm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mapper" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -1416,6 +1590,8 @@
       <workItem from="1508393599944" duration="670000" />
       <workItem from="1509527788507" duration="12000" />
       <workItem from="1509600166813" duration="22000" />
+      <workItem from="1510131070151" duration="657000" />
+      <workItem from="1510290993370" duration="11000" />
     </task>
     <servers />
   </component>
@@ -1452,7 +1628,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="73564000" />
+    <option name="totallyTimeSpent" value="74232000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1932" height="1056" extended-state="0" />
@@ -1480,7 +1656,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34530708" sideWeight="0.49784946" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32908458" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32908458" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24139784" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" x="663" y="230" width="589" height="579" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24784946" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" x="663" y="230" width="589" height="579" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -1513,34 +1689,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/ssm/src/main/java/com/macro/ssm/po/CityExample.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ssm/src/main/java/com/macro/ssm/po/CountryExample.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ssm/src/main/java/com/macro/ssm/po/City.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ssm/src/main/java/com/macro/ssm/po/Country.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ssm/src/main/resources/spring/spring-trans.xml" />
     <entry file="file://$PROJECT_DIR$/ssm/src/main/resources/spring/applicationContext.xml" />
     <entry file="file://$PROJECT_DIR$/ssm/src/main/webapp/WEB-INF/web.xml">
@@ -1574,20 +1722,6 @@
             <Category>Show filesets as groups</Category>
           </Categories>
           <SCOPE>All</SCOPE>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mybatis-generate/src/main/java/com/macro/ssm/mapper/CountryMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="8" column="32" lean-forward="false" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mybatis-generate/src/main/java/com/macro/ssm/po/CountryExample.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-110">
-          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -2075,30 +2209,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mybatis-generate/src/main/resources/generator.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="20" lean-forward="false" selection-start-line="0" selection-start-column="20" selection-end-line="0" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mybatis-generate/src/main/resources/generatorConfig.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="18" column="8" lean-forward="false" selection-start-line="18" selection-start-column="8" selection-end-line="20" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mybatis-generate/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="16" column="20" lean-forward="false" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ssm/src/main/java/com/macro/ssm/controller/PictureUploadController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="242">
@@ -2139,8 +2249,198 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ssm/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-440">
+        <state relative-caret-position="286">
           <caret line="13" column="21" lean-forward="false" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mybatis-generate/src/main/resources/generator.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="20" lean-forward="false" selection-start-line="0" selection-start-column="20" selection-end-line="0" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mybatis-generate/src/main/java/com/macro/ssm/mapper/CountryMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="8" column="32" lean-forward="false" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mybatis-generate/src/main/java/com/macro/ssm/po/City.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+          <folding>
+            <element signature="e#213#214#0" expanded="false" />
+            <element signature="e#242#243#0" expanded="false" />
+            <element signature="e#285#286#0" expanded="false" />
+            <element signature="e#321#322#0" expanded="false" />
+            <element signature="e#352#353#0" expanded="false" />
+            <element signature="e#379#380#0" expanded="false" />
+            <element signature="e#419#420#0" expanded="false" />
+            <element signature="e#480#481#0" expanded="false" />
+            <element signature="e#515#516#0" expanded="false" />
+            <element signature="e#547#548#0" expanded="false" />
+            <element signature="e#596#597#0" expanded="false" />
+            <element signature="e#638#639#0" expanded="false" />
+            <element signature="e#673#674#0" expanded="false" />
+            <element signature="e#706#707#0" expanded="false" />
+            <element signature="e#756#757#0" expanded="false" />
+            <element signature="e#800#801#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mybatis-generate/src/main/java/com/macro/ssm/po/CityExample.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#268#269#0" expanded="false" />
+            <element signature="e#324#325#0" expanded="false" />
+            <element signature="e#382#383#0" expanded="false" />
+            <element signature="e#432#433#0" expanded="false" />
+            <element signature="e#472#473#0" expanded="false" />
+            <element signature="e#508#509#0" expanded="false" />
+            <element signature="e#557#558#0" expanded="false" />
+            <element signature="e#597#598#0" expanded="false" />
+            <element signature="e#632#633#0" expanded="false" />
+            <element signature="e#663#664#0" expanded="false" />
+            <element signature="e#710#711#0" expanded="false" />
+            <element signature="e#745#746#0" expanded="false" />
+            <element signature="e#786#787#0" expanded="false" />
+            <element signature="e#828#829#0" expanded="false" />
+            <element signature="e#1697#1698#0" expanded="false" />
+            <element signature="e#1747#1748#0" expanded="false" />
+            <element signature="e#1798#1799#0" expanded="false" />
+            <element signature="e#1837#1838#0" expanded="false" />
+            <element signature="e#1885#1886#0" expanded="false" />
+            <element signature="e#1924#1925#0" expanded="false" />
+            <element signature="e#11326#11327#0" expanded="false" />
+            <element signature="e#11357#11358#0" expanded="false" />
+            <element signature="e#11726#11727#0" expanded="false" />
+            <element signature="e#11766#11767#0" expanded="false" />
+            <element signature="e#11802#11803#0" expanded="false" />
+            <element signature="e#11838#11839#0" expanded="false" />
+            <element signature="e#11880#11881#0" expanded="false" />
+            <element signature="e#11922#11923#0" expanded="false" />
+            <element signature="e#11960#11961#0" expanded="false" />
+            <element signature="e#11998#11999#0" expanded="false" />
+            <element signature="e#12040#12041#0" expanded="false" />
+            <element signature="e#12082#12083#0" expanded="false" />
+            <element signature="e#12125#12126#0" expanded="false" />
+            <element signature="e#12168#12169#0" expanded="false" />
+            <element signature="e#12208#12209#0" expanded="false" />
+            <element signature="e#12248#12249#0" expanded="false" />
+            <element signature="e#12290#12291#0" expanded="false" />
+            <element signature="e#12332#12333#0" expanded="false" />
+            <element signature="e#12974#12975#0" expanded="false" />
+            <element signature="e#13026#13027#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mybatis-generate/src/main/java/com/macro/ssm/po/Country.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+          <folding>
+            <element signature="e#195#196#0" expanded="false" />
+            <element signature="e#227#228#0" expanded="false" />
+            <element signature="e#276#277#0" expanded="false" />
+            <element signature="e#318#319#0" expanded="false" />
+            <element signature="e#352#353#0" expanded="false" />
+            <element signature="e#382#383#0" expanded="false" />
+            <element signature="e#428#429#0" expanded="false" />
+            <element signature="e#498#499#0" expanded="false" />
+            <element signature="e#533#534#0" expanded="false" />
+            <element signature="e#566#567#0" expanded="false" />
+            <element signature="e#616#617#0" expanded="false" />
+            <element signature="e#660#661#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mybatis-generate/src/main/java/com/macro/ssm/po/CountryExample.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#274#275#0" expanded="false" />
+            <element signature="e#330#331#0" expanded="false" />
+            <element signature="e#388#389#0" expanded="false" />
+            <element signature="e#438#439#0" expanded="false" />
+            <element signature="e#478#479#0" expanded="false" />
+            <element signature="e#514#515#0" expanded="false" />
+            <element signature="e#563#564#0" expanded="false" />
+            <element signature="e#603#604#0" expanded="false" />
+            <element signature="e#638#639#0" expanded="false" />
+            <element signature="e#669#670#0" expanded="false" />
+            <element signature="e#716#717#0" expanded="false" />
+            <element signature="e#751#752#0" expanded="false" />
+            <element signature="e#792#793#0" expanded="false" />
+            <element signature="e#834#835#0" expanded="false" />
+            <element signature="e#1703#1704#0" expanded="false" />
+            <element signature="e#1753#1754#0" expanded="false" />
+            <element signature="e#1804#1805#0" expanded="false" />
+            <element signature="e#1843#1844#0" expanded="false" />
+            <element signature="e#1891#1892#0" expanded="false" />
+            <element signature="e#1930#1931#0" expanded="false" />
+            <element signature="e#9467#9468#0" expanded="false" />
+            <element signature="e#9498#9499#0" expanded="false" />
+            <element signature="e#9867#9868#0" expanded="false" />
+            <element signature="e#9907#9908#0" expanded="false" />
+            <element signature="e#9943#9944#0" expanded="false" />
+            <element signature="e#9979#9980#0" expanded="false" />
+            <element signature="e#10021#10022#0" expanded="false" />
+            <element signature="e#10063#10064#0" expanded="false" />
+            <element signature="e#10101#10102#0" expanded="false" />
+            <element signature="e#10139#10140#0" expanded="false" />
+            <element signature="e#10181#10182#0" expanded="false" />
+            <element signature="e#10223#10224#0" expanded="false" />
+            <element signature="e#10266#10267#0" expanded="false" />
+            <element signature="e#10309#10310#0" expanded="false" />
+            <element signature="e#10349#10350#0" expanded="false" />
+            <element signature="e#10389#10390#0" expanded="false" />
+            <element signature="e#10431#10432#0" expanded="false" />
+            <element signature="e#10473#10474#0" expanded="false" />
+            <element signature="e#11115#11116#0" expanded="false" />
+            <element signature="e#11167#11168#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mybatis-generate/src/main/java/com/macro/ssm/mapper/CityMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="550">
+          <caret line="28" column="6" lean-forward="false" selection-start-line="28" selection-start-column="6" selection-end-line="28" selection-end-column="6" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mybatis-generate/src/main/resources/generatorConfig.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="14" column="26" lean-forward="false" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mybatis-generate/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="16" column="20" lean-forward="false" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
           <folding />
         </state>
       </provider>
