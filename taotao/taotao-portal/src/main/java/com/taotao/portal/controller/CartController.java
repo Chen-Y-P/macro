@@ -17,7 +17,11 @@ import com.taotao.portal.pojo.Item;
 import com.taotao.portal.service.CartService;
 
 /**
- * 购物车管理
+ * 购物车管理（以JSON格式存储在Cookie中，登录后同步到Redis中）
+ * 1.添加商品到购物车
+ * 2.显示购物车列表
+ * 3.更新商品数量
+ * 4.删除购物车商品
  */
 @Controller
 @RequestMapping("/cart")

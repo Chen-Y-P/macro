@@ -12,6 +12,9 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import com.taotao.common.pojo.TaotaoResult;
 import com.taotao.sso.service.TokenService;
 
+/**
+ * 根据token获取用户信息
+ */
 @Controller
 public class TokenController {
 

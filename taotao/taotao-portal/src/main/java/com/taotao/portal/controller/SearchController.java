@@ -10,6 +10,10 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 /**
  * 商品搜索
+ * 搜索：关键字搜索（标题、卖点、分类名称、产品描述综合搜索）
+ * 筛选：分类、品牌、价格区间
+ * 排序：按销量、按价格、按新品
+ * 商品导入solr中（rest工程中）
  */
 @Controller
 public class SearchController {

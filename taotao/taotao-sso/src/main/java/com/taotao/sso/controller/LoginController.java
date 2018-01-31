@@ -14,6 +14,10 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import com.taotao.common.pojo.TaotaoResult;
 import com.taotao.sso.service.LoginService;
 
+/**
+ * 登录和登出功能
+ * （登录后生产UUID存储到Cookie中，并以UUID为key将用户信息存储到Redis）
+ */
 @Controller
 public class LoginController {
 

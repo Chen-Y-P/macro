@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 /**
- * 页面静态化
+ * 静态化商品详情页面
  */
 @Controller
 public class StaticPageController {

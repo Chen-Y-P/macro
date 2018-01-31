@@ -20,7 +20,11 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * 商品订单管理
+ * 商品订单管理（需要登录）
+ * 1.订单信息确认
+ * 2.选择收货地址
+ * 3.下单（订单Iid用Redis的incr命令生成）
+ * 4.订单查询（使用ResultMap映射对象、集合）
  */
 @Controller
 @RequestMapping("/order")

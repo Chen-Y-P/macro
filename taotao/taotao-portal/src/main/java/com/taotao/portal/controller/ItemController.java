@@ -13,6 +13,7 @@ import com.taotao.portal.service.ItemService;
 
 /**
  * 商品详情页展示
+ * 商品详情，商品描述，规格参数
  */
 @Controller
 public class ItemController {

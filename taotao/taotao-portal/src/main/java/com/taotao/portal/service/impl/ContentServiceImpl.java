@@ -60,10 +60,12 @@ public class ContentServiceImpl implements ContentService {
 			FloorItem floorItem = new FloorItem();
 			floorItem.setFloorId(i);
 			floorItem.setCateName("家电通讯"+i);
+			//左侧分类广告
 			List<FloorItem.LeftCate> leftCateList = getLeftCateList();
 			floorItem.setLeftCateList(leftCateList);
 			List<FloorItem.TabCate> tabCateList = getTabCateList();
 			floorItem.setTabCateList(tabCateList);
+			//右侧品牌广告
 			List<FloorItem.BrandAd> brandAdList = getBrandAdList();
 			floorItem.setBrandAdList(brandAdList);
 			floorItemList.add(floorItem);

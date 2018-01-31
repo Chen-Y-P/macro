@@ -13,6 +13,10 @@ import com.taotao.common.utils.ExceptionUtil;
 import com.taotao.pojo.TbUser;
 import com.taotao.sso.service.RegisterService;
 
+/**
+ * 检测用户名、手机号、邮箱号是否唯一
+ * 注册功能
+ */
 @Controller
 @RequestMapping("/user")
 public class RegisterController {

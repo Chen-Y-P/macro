@@ -13,7 +13,9 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import java.util.List;
 
 /**
- * 首页展示
+ * 首页
+ * 1.广告展示
+ * 2.商品分类展示：三级目录展示分类
  */
 @Controller
 public class IndexController {
@@ -44,22 +46,28 @@ public class IndexController {
 //	}
 
 	/**
-	 * 返回首页的静态数据
+	 * 返回首页的静态广告数据
 	 */
 	@RequestMapping("/index")
 	public String showIndex(Model model) {
+		//首页轮播大广告
 		String dataMSlide = contentService.getJsonContent("json/DATA_MSlide.json");
 		model.addAttribute("dataMSlide", dataMSlide);
+		//首页滑动小广告
 		String dataMScroll = contentService.getJsonContent("json/DATA_MScroll.json");
 		model.addAttribute("dataMScroll", dataMScroll);
+		//楼层中的单独商品广告
 		String dataTabs = contentService.getJsonContent("json/DATA_Tabs.json");
 		model.addAttribute("dataTabs", dataTabs);
 		String dataFSlideF8 = contentService.getJsonContent("json/DATA_FSlideF8.json");
 		model.addAttribute("dataFSlideF8", dataFSlideF8);
+		//右上角小广告
 		String dataTopRight = contentService.getJsonContent("json/DATA_TopRight.json");
 		model.addAttribute("dataTopRight", dataTopRight);
+		//楼层广告
 		List<FloorItem> floorItemList = contentService.getFloorItemList();
 		model.addAttribute("floorItemList",floorItemList);
+		//快报广告
 		List<QuickReportItem> quickReportItemList = contentService.getQuickReportItemList();
 		model.addAttribute("quickReportItemList",quickReportItemList);
 		return "index";
