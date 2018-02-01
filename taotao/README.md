@@ -32,10 +32,10 @@ taotao
 #### 后端技术：
 技术 | 名称 
 ----|----
-Spring Framework | 容器  
+SpringFramework | 容器  
 SpringMVC | MVC框架  
 MyBatis | ORM框架  
-MyBatis Generator | 代码生成  
+MyBatisGenerator | 代码生成  
 PageHelper | MyBatis物理分页插件
 Druid | 数据库连接池  
 Freemarker | 模板引擎  
@@ -44,6 +44,7 @@ Solr | 分布式全文搜索引擎
 Slf4j | 日志组件  
 HttpClient | 远程服务调用客户端  
 Jackson | JSON数据解析工具  
+RabbitMQ | 消息队列  
 Maven | 项目构建管理  
 
 #### 前端技术：
@@ -136,6 +137,7 @@ KindEditor | 富文本编辑器
 - Mysql5.5+
 - Redis
 - Solr
+- RabbitMQ
 
 ### 其他待实现功能
 
