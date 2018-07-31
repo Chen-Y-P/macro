@@ -1,0 +1,5 @@
+{"_id":{"$oid":"4c4b1476238d3b4dd5000001"},"_class":"com.macro.garden.domain.User","username":"kbanker","email":"kylebanker@gmail.com","firstName":"Kyle","lastName":"Banker","hashedPassword":"bd1cfa194c3a603e7186780824b04419","addresses":[{"name":"home","street":"588 5th Street","city":"Brooklyn","state":"NY","zip":11215},{"name":"work","street":"1 E. 23rd Street","city":"New York","state":"NE","zip":10010}],"paymentMethods":[{"name":"VISA","lastFour":2127,"cryptedNumber":"43f6ba1dfda6b8106dc7","expirationDate":{"$date":"2016-05-01T07:00:00.000Z"}}]}
+{"_id":{"$oid":"4c4b1476238d3b4dd5000002"},"_class":"com.macro.garden.domain.User","username":"pbakkum","firstName":"Peter","lastName":"Bakkum","email":"sss"}
+{"_id":{"$oid":"4c4b1476238d3b4dd5000003"},"_class":"com.macro.garden.domain.User","username":"thawkins","firstName":"Tim","lastName":"Hawkins"}
+{"_id":{"$oid":"4c4b1476238d3b4dd5000004"},"_class":"com.macro.garden.domain.User","username":"sverch","firstName":"Shaun","lastName":"Verch"}
+{"_id":{"$oid":"4c4b1476238d3b4dd5000005"},"_class":"com.macro.garden.domain.User","username":"dgarrett","firstName":"Doug","lastName":"Garrett"}

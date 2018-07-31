@@ -1,0 +1,5 @@
+{"_id":{"$oid":"4c4b1476238d3b4dd5000041"},"_class":"com.macro.garden.domain.Review","productId":"4c4b1476238d3b4dd5003981","userId":"4c4b1476238d3b4dd5000001","username":"dgreenthumb","rating":4,"helpfulVotes":3,"voterIds":["4c4b1476238d3b4dd5000041","7a4f0376238d3b4dd5000003","92c21476238d3b4dd5000032"]}
+{"_id":{"$oid":"4c4b1476238d3b4dd5000042"},"_class":"com.macro.garden.domain.Review","productId":"4c4b1476238d3b4dd5003982","userId":"4c4b1476238d3b4dd5000001","rating":3,"helpfulVotes":7}
+{"_id":{"$oid":"4c4b1476238d3b4dd5000043"},"_class":"com.macro.garden.domain.Review","productId":"4c4b1476238d3b4dd5003981","userId":"4c4b1476238d3b4dd5000002","rating":5,"helpfulVotes":7}
+{"_id":{"$oid":"4c4b1476238d3b4dd5000044"},"_class":"com.macro.garden.domain.Review","productId":"4c4b1476238d3b4dd5003982","userId":"4c4b1476238d3b4dd5000002","rating":4,"helpfulVotes":4,"voterIds":["4c4b1476238d3b4dd5000002","4c4b1476238d3b4dd5000003","4c4b1476238d3b4dd5000001"]}
+{"_id":{"$oid":"4c4b1476238d3b4dd5000045"},"_class":"com.macro.garden.domain.Review","productId":"4c4b1476238d3b4dd5003981","userId":"4c4b1476238d3b4dd5000003","rating":4,"helpfulVotes":10}
