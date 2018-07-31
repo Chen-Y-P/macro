@@ -43,12 +43,12 @@ public class OrderController {
         calendar.set(2010, 0, 1);
         Date start = calendar.getTime();
         Aggregation aggregation = Aggregation.newAggregation(
-                Aggregation.project("purchaseDate")
+                Aggregation.project("purchaseDate","subTotal")
                         .and("purchaseDate").extractYear().as("year")
                         .and("purchaseDate").extractMonth().as("month"),
                 Aggregation.match(Criteria.where("purchaseDate").gte(start)),
-                Aggregation.group("year","month").count().as("count"));
-        // TODO: 2018/7/30 没法运行
+                Aggregation.group("year","month").count().as("count")
+                        .sum("subTotal").as("total"));
         AggregationResults<BasicDBObject> aggregationResults = mongoTemplate.aggregate(aggregation, Order.class, BasicDBObject.class);
         return aggregationResults.getMappedResults();
     }
