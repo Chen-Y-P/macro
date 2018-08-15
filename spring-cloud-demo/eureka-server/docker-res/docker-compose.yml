@@ -1,0 +1,29 @@
+#指定docker-compose的版本号
+version: '2'
+services:
+  #指定服务名称
+  eureka-server:
+    #指定服务所指定的镜像
+    image: macro/eureka-server:0.0.1-SNAPSHOT
+    #暴露端口信息
+    ports:
+    - "1111:1111"
+  hello-service:
+    image: macro/hello-service:0.0.1-SNAPSHOT
+    ports:
+      - "8080:8080"
+    #使用别名discovery可以连接到eureka-server容器
+    links:
+      - eureka-server:discovery
+  feign-consumer:
+    image: macro/feign-consumer:0.0.1-SNAPSHOT
+    ports:
+      - "9001:9001"
+    links:
+      - eureka-server:discovery
+  api-gateway:
+    image: macro/api-gateway:0.0.1-SNAPSHOT
+    ports:
+      - "5555:5555"
+    links:
+      - eureka-server:discovery

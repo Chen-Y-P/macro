@@ -1,4 +1,4 @@
-#Docker命令
+#Docker笔记
 
 ##Docker 镜像常用命令
 ###搜索镜像
@@ -66,3 +66,22 @@ docker tag macro/eureka-server:0.0.1 localhost:5000/macro/eureka-server:0.0.1
 
 ###安装命令补全工具
 sudo curl -L https://raw.githubusercontent.com/docker/compose/1.22.0/contrib/completion/bash/docker-compose -o /etc/bash_completion.d/docker-compose
+
+###常用命令
+- 构建、创建、启动相关容器：docker-compose up
+- 列出所有容器：docker-compose ps
+- 删除指定服务的容器：docker-compose rm eureka
+- 对容器进行动态扩容：docker-compose scale eureka=3
+- 停止相关容器：docker-compose stop eureka
+- 启动相关容器：docker-compose start eureka
+
+###编排SpringCloud微服务
+####所使用到的工程
+- eureka-server
+- hello-service
+- feign-consumer
+- api-gateway
+####编排模式
+1. 编排SpringCloud微服务：见eureka-server/docker-res/docker-compose.yml
+2. 简化SpringCloud微服务编排：见eureka-server/docker-res/docker-compose-simple.yml
+3. 编排高可用的注册中心：见eureka-server/docker-res/docker-compose-eureka.yml

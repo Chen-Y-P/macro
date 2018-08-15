@@ -1,0 +1,12 @@
+version: '2'
+services:
+  eureka-server:
+    image: macro/eureka-server:0.0.1-SNAPSHOT
+    ports:
+    - "1111:1111"
+  hello-service:
+    image: macro/hello-service:0.0.1-SNAPSHOT
+    ports:
+      - "8080:8080"
+    links:
+      - eureka-server:discovery
