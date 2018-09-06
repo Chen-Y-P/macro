@@ -1,43 +1,12 @@
 # 项目
 
-## KCircle
+## KMall商城系统
 
 ### 项目介绍
 
-KCircle是为业务系统提供公共服务的基础框架，基于Spring+SpringMVC+Mybatis分布式敏捷开发系统架构，
-包括权限管理、内容管理、支付中心、用户中心、存储管理、日志分析等模块。
-    
-### 开发工具
-
-IntelliJ IDEA、PowerDesigner、Navicat、SVN、maven
-    
-### 开发环境
-
-Jdk7+、Tomcat7+、Mysql5.5+
-Redis、Zookeeper、Nginx
-
-### 后端技术
-
-Spring Framework、SpringMVC、Apache Shiro、
-MyBatis、MyBatis Generator、PageHelper、
-Druid、FluentValidator、Thymeleaf、
-ZooKeeper、Dubbo、Redis、
-Ehcache、Log4J、Swagger2、
-AliOSS
-
-### 前端技术
-jQuery、Bootstrap、Bootstrap-table、
-Font-awesome、material-design-iconic-font、Waves、
-zTree、Select2、jquery-confirm、
-Editor.md
-
-## 家乐佳商城
-
-### 项目介绍
-
-家乐佳商城是一个综合性的B2C商城，该项目分为前台商城系统和后台管理系统：
-前台用户可以查看推荐商品、进行商品搜索、商品购买、个人信息管理等操作；
-后台用户可以进行商品管理、商品分类管理、商品规格参数管理、内容管理、内容分类管理、订单管理等操作。
+KMall商城是一个综合性的B2C商城，该系统分为移动端商城和后台商城管理系统；
+移动端商城包括首页促销、商品展示、购物车、订单管理、个人中心、专题展示、话题展示、消息中心等功能模块；
+后台商城管理系统包括商品、订单、库存、用户、促销、内容、统计、财务、权限等功能模块。
 
 ### 开发工具
 
@@ -45,48 +14,74 @@ IntelliJ IDEA、PowerDesigner、Navicat、SVN、maven
 
 ### 开发环境
 
-Jdk7+、Mysql5.5+、Redis
-Solr、RabbitMQ
+Jdk7+、Mysql5.5+、Redis3.2、Elasticsearch2.4、MongoDb3.2、RabbitMQ3.4、nginx1.10
 
 ### 后端技术
 
-SpringFramework、SpringMVC、MyBatis、
-MyBatisGenerator、PageHelper、Druid、
-Freemarker、Redis、Solr、
-Slf4j、HttpClient、Jackson、RabbitMQ
+SpringBoot、SpringCloud、SpringSecurity、SpringData、
+MyBatis、MyBatisGenerator、PageHelper、Swagger-UI、Docker、Docker-compose
 
 ### 前端技术
 
-jQuery、EasyUI、KindEditor
+Vue、Vue-router、Vuex、Element、Axios
 
-## KShow
+## KShow导购系统
 
 ### 项目介绍
 
-KShow是一款门店导购软件，旨在帮助门店提高成单几率，帮助门厂实现销量上的增长。
-包括产品DIY、产品报价、画册展示、下单等功能。
+KShow是一款门店导购软件，旨在帮助门店提高成单几率，实现销量上的增长，目前有3000+厂家、90000+经销商门店在使用。
+包括产品DIY、产品报价、画册展示、订单管理等功能。
 
 ### 开发工具
 
-Eclipse、Navicat、SVN、maven
+IntelliJ IDEA、Navicat、SVN、maven
 
 ### 开发环境
 
-Jdk7+、Mysql5.5+
+Jdk7+、Tomcat7+、Mysql5.5+、Redis3.2、nginx1.10
 
 ### 后端技术
 
 SpringFramework、SpringMVC、MyBatis、
 MyBatisGenerator、PageHelper、DBCP、Jackson
 
+## 门图网
+
+### 项目介绍
+
+门图网是一个定制家居服务平台，主要是为门窗厂家提供作图服务。
+包括图片展示、滴滴打图、原材料商、画册出售、设计服务等功能。
+    
+### 开发工具
+
+IntelliJ IDEA、PowerDesigner、Navicat、SVN、maven
+    
+### 开发环境
+
+Jdk7+、Tomcat7+、Mysql5.5+、Redis、Nginx
+
+### 后端技术
+
+Spring Framework、SpringMVC、MyBatis、
+MyBatis Generator、PageHelper、Druid、Redis
+
+### 前端技术
+jQuery、Bootstrap、Bootstrap-table、
+Font-awesome、material-design-iconic-font、Waves、
+zTree、Select2、jquery-confirm、Editor.md
+
+
 # 技能
 
 熟练掌握Java语言，具有良好的编码习惯；
-熟练掌握IntelliJ IDEA、Eclipse、PowerDesigner、Navicat、SVN、maven等开发工具的使用；
-熟悉Spring Framework、SpringMVC、SpringCloud、SpringBoot、SpringSecurity、
-Dubbo、Shiro、RabbitMQ、Redis、Solr等开源框架的使用；
-熟悉Mysql数据库及Linux系统的使用；
-熟悉jQuery、EasyUI、Bootstrap等前端框架的使用。
+熟练掌握IDEA、Eclipse等开发工具的使用；
+熟悉掌握Spring Framework、SpringMVC、MyBatis、
+SpringBoot、SpringSecurity、RabbitMQ等开源框架的使用；
+熟练掌握Mysql、Redis、MongoDb、ElasticSearch等数据存储的使用；
+熟悉SpringCloud、Dubbo等微服务框架的使用；
+熟悉Vue、Vue-router、Vuex、Element、Axios等前端框架的使用；
+熟悉Linux环境下的Docker容器部署；
+熟悉Axure、PowerDesigner、MindMaster等设计功能的使用；
 
 
 
